@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+apiVersion: v1
+metadata:
+  name: node-app-svc
+  namespace: my
+spec:
+  selector:
+    app: my-app
+  ports:
+  - protocol: TCP
+    port: 3000
+  type: LoadBalancer
